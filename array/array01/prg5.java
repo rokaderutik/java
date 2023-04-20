@@ -1,4 +1,4 @@
-//sum of all elements
+//divisible by 5
 
 import java.io.*;
 
@@ -18,13 +18,11 @@ class c1{
 			arr[i] = Integer.parseInt(br.readLine());
 		}
 		
-		int sum = 0;
+		System.out.println();
 		for(int i=0; i<arr.length; i++){
-             
-			sum += arr[i];
+                        if(arr[i]%5 == 0)
+				System.out.println(arr[i]);
                 }
-
-		System.out.println("Sum of array elements = " + sum);
 
 	}
 }

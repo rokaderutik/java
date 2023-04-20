@@ -1,4 +1,4 @@
-//divisible by 5
+//find minimun no
 
 import java.io.*;
 
@@ -18,11 +18,13 @@ class c1{
 			arr[i] = Integer.parseInt(br.readLine());
 		}
 		
-		System.out.println();
-		for(int i=0; i<arr.length; i++){
-                        if(arr[i]%5 == 0)
-				System.out.println(arr[i]);
+		int mini = arr[0];
+		for(int i=1; i<arr.length; i++){
+                        if(arr[i] < mini)
+				mini = arr[i];
                 }
+
+		System.out.println("Minimun no is  = " + mini);
 
 	}
 }

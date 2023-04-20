@@ -1,4 +1,4 @@
-//print products of even elements only
+//even odd count
 
 import java.io.*;
 
@@ -18,13 +18,15 @@ class c1{
 			arr[i] = Integer.parseInt(br.readLine());
 		}
 		
-		int prodEven = 1;
+		int cntOdd = 0;
 		for(int i=0; i<arr.length; i++){
-                        if(arr[i]%2 == 0)
-				prodEven *= arr[i];
+                        if(arr[i]%2 == 1)
+				cntOdd ++;
                 }
 
-		System.out.println("Product of even  no.s = " + prodEven);
+		System.out.println("No. of odd elements = " + cntOdd);
+		System.out.println("No. of even elements = " + (arr.length-cntOdd));
+
 
 	}
 }

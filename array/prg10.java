@@ -1,4 +1,4 @@
-//sum of all elements
+//addition  of digits is even
 
 import java.io.*;
 
@@ -18,13 +18,17 @@ class c1{
 			arr[i] = Integer.parseInt(br.readLine());
 		}
 		
-		int sum = 0;
+		System.out.println("Output:");
 		for(int i=0; i<arr.length; i++){
-             
-			sum += arr[i];
-                }
-
-		System.out.println("Sum of array elements = " + sum);
+                        int n = arr[i];
+			int sum = 0;
+			while(n != 0){
+				sum += n%10;
+				n /= 10;
+			}
+			if(sum%2 == 0)
+				System.out.println(arr[i]);
+		}
 
 	}
 }

@@ -1,4 +1,4 @@
-//sum of all elements
+//take 7 characters print only vowels
 
 import java.io.*;
 
@@ -10,21 +10,21 @@ class c1{
 		System.out.println("Enter array size:");
 		int size = Integer.parseInt(br.readLine());
 
-		int arr[] = new int[size];
+		char arr[] = new char[size];
 
 		System.out.println("Enter array elements");
 
 		for(int i=0; i<arr.length; i++){
-			arr[i] = Integer.parseInt(br.readLine());
+			arr[i] = (char)br.read();
+			br.skip(1);
 		}
-		
-		int sum = 0;
-		for(int i=0; i<arr.length; i++){
-             
-			sum += arr[i];
-                }
 
-		System.out.println("Sum of array elements = " + sum);
+		System.out.println();
+		for(int i=0; i<arr.length; i++){
+                        if(arr[i] == 'a' || arr[i] == 'e' || arr[i] == 'i' || arr[i] == 'o' || arr[i] == 'u' ||
+				arr[i] == 'A' || arr[i] == 'E' || arr[i] == 'I' || arr[i] == 'O' || arr[i] == 'U')
+				System.out.println(arr[i]);
+                }
 
 	}
 }

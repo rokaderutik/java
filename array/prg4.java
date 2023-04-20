@@ -1,4 +1,4 @@
-//take 7 characters print only vowels
+//search no and return index
 
 import java.io.*;
 
@@ -10,21 +10,29 @@ class c1{
 		System.out.println("Enter array size:");
 		int size = Integer.parseInt(br.readLine());
 
-		char arr[] = new char[size];
+		int arr[] = new int[size];
 
 		System.out.println("Enter array elements");
 
 		for(int i=0; i<arr.length; i++){
-			arr[i] = (char)br.read();
-			br.skip(1);
+			arr[i] = Integer.parseInt(br.readLine());
 		}
+		
+		System.out.print("Enter element to search: ");
+                int no = Integer.parseInt(br.readLine());
 
-		System.out.println();
+		boolean flag = false;
+
 		for(int i=0; i<arr.length; i++){
-                        if(arr[i] == 'a' || arr[i] == 'e' || arr[i] == 'i' || arr[i] == 'o' || arr[i] == 'u' ||
-				arr[i] == 'A' || arr[i] == 'E' || arr[i] == 'I' || arr[i] == 'O' || arr[i] == 'U')
-				System.out.println(arr[i]);
+                        if(arr[i] == no){
+				flag = true;
+				System.out.println("Element found at index: " + i);
+				break;
+			}
                 }
+
+		if(flag == false)
+			System.out.println("Element not found");
 
 	}
 }

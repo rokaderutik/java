@@ -1,4 +1,4 @@
-//product of odd index 
+//even odd sum
 
 import java.io.*;
 
@@ -18,13 +18,17 @@ class c1{
 			arr[i] = Integer.parseInt(br.readLine());
 		}
 		
-		int prodOdd = 1;
+		int sumOdd = 0, sumEven = 0;
 		for(int i=0; i<arr.length; i++){
-                        if(i%2 == 1)
-				prodOdd *= arr[i];
+                        if(arr[i]%2 == 1)
+				sumOdd += arr[i];
+			else
+				sumEven += arr[i];
                 }
 
-		System.out.println("Product of odd index no.s = " + prodOdd);
+		System.out.println("Sum of odd elements = " + sumOdd);
+		System.out.println("Sum of even elements = " + sumEven);
+
 
 	}
 }
